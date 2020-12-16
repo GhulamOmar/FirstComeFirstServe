@@ -1,6 +1,4 @@
-package LinkedListQueue;
-
-import LinkedListQueue.Customer;
+package FirstComeFirstServe;
 
 /** Class Customer
  * @author Omar ahmad
