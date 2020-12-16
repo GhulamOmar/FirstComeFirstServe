@@ -1,20 +1,21 @@
-package FirstComeFirstServe;
+package LinkedListQueue;
 
-/**class Customer 
- * @author Omar ahmad.
+import LinkedListQueue.Customer;
+
+/** Class Customer
+ * @author Omar ahmad
  * This is my Customer class is known superclass or parent-class
  */
 public class Customer {
 	/* Members
-	 * Variable declaration.
-	  */
+	 * Variable declaration.*/
 	private String FirstNmae;
 	private String LastName;
 	
 	public Customer() {
 		super();
 	}
-	/** constructor just use two items.
+	/**constructor
 	 * @param firstname
 	 * @param lastname
 	 */
@@ -23,12 +24,11 @@ public class Customer {
 		FirstNmae = firstname;
 		LastName = lastname;
 	}
-
-	/*getters and setters*/
+/*Getter*/
 	public String getFirstNmae() {
 		return FirstNmae;
 	}
-
+/*Setter*/
 	public void setFirstNmae(String firstname) {
 		FirstNmae = firstname;
 	}
@@ -42,6 +42,9 @@ public class Customer {
 	}
 	
 
+	/** Method hashCode
+	 *  returning the First name and Last name
+	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -52,18 +55,21 @@ public class Customer {
 	}
 	@Override
 	public boolean equals(Object obj) {
+		// instantiate a Boolean.
 		if (this == obj)
 			return true;
 		if (obj == null)
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
+		// instantiate an Object
 		Customer other = (Customer) obj;
 		if (LastName == null) {
 			if (other.LastName != null)
 				return false;
 		} else if (!LastName.equals(other.LastName))
 			return false;
+		// test equality of null.
 		if (FirstNmae == null) {
 			if (other.FirstNmae != null)
 				return false;
@@ -71,12 +77,12 @@ public class Customer {
 			return false;
 		return true;
 	}
+ 
 	@Override
 	/*ToString method is used to display the contents of an object inside it*/
 	public String toString() {
-		return (FirstNmae + "  "+ LastName);
+		return (FirstNmae + "  "+ LastName +"\n");
+		
 	}
-	
-	
-	
+
 }
